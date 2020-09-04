@@ -12,6 +12,7 @@ import { Booking } from "./components/Parking/Booking";
 import { Unbook } from "./components/Parking/Unbook";
 import { Pay } from "./components/Parking/Pay";
 import { Alert } from "./components/Layout/Alert";
+import { Footer } from "./components/Layout/Footer";
 function App() {
   return (
     <GlobalProvider>
@@ -21,6 +22,7 @@ function App() {
             <Nav />
             <Secondnav />
             <Alert/>
+            <Footer/>
             <Switch>
               <Route path="/" exact component={ParkingLots} />
               <Route path="/login" component={Login} />

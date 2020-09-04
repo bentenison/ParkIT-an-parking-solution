@@ -7,7 +7,7 @@ const InitialState = {
   error: [],
   lots: [],
   booking: [],
-  unbooked:[],
+  unbooked: [],
 };
 
 export const GlobalContext = createContext(InitialState);
@@ -140,9 +140,10 @@ export const GlobalProvider = ({ children }) => {
     const response = await fetch(
       "https://parkit-tanvir.herokuapp.com/parking/unbook",
       {
-        method: "DELETE",
+        method: "POST",
+        mode: "cors",
         headers: { "Content-Type": "application/json", "x-auth-token": token },
-        body: Lotnumber,
+        body: JSON.stringify({ Lotnumber: Lotnumber }),
       }
     );
     const data = await response.json();
@@ -168,7 +169,7 @@ export const GlobalProvider = ({ children }) => {
         error: state.error,
         lots: state.lots,
         booking: state.booking,
-        unbooked:state.unbooked,
+        unbooked: state.unbooked,
         register,
         login,
         logout,

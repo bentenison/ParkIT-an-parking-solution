@@ -89,15 +89,16 @@ export const Booking = () => {
             <div className="form-group col-md-6">
               <label for="inputCity">Date from</label>
               <DatePicker
-                className="form-control"
+                className="form-control ml-2"
                 selected={date_from}
                 onChange={(date) => setDate_from(date)}
               />
             </div>
 
-            <div className="form-group col-md-6">
+            <div className="form-group col-md-6 ">
               <label for="inputZip">Date to</label>
               <DatePicker
+                className="form-control ml-2"
                 selected={date_to}
                 onChange={(date) => setDate_to(date)}
               />

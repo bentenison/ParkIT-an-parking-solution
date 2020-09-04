@@ -13,7 +13,7 @@ export const Nav = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <span className="navbar-brand">Navbar</span>
+        <span className="navbar-brand"><img src={require("../../img/Logo ParkIT.svg")} /></span>
         <button
           className="navbar-toggler"
           type="button"
